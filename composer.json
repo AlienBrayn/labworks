@@ -1,0 +1,39 @@
+{
+  "require": {
+    "php":">=5.3.0",
+    "alienbrayn/labworks":"5.0.1",
+    "rok9ru/trpo-core":"1.0"
+  },
+  "repositories":[
+    {
+      "type":"package",
+      "package":{
+        "name":"alienbrayn/labworks",
+        "version":"5.0.1",
+        "source":{
+          "type":"git",
+          "url":"https://github.com/AlienBrayn/labworks.git",
+          "reference":"master"
+        }
+      }
+    },
+    {
+      "type":"package",
+      "package":{
+        "name":"rok9ru/trpo-core",
+        "version":"1.0",
+        "source":{
+          "type":"git",
+          "url":"https://github.com/rok9ru/trpo-core.git",
+          "reference":"master"
+        }
+      }
+    }
+  ],
+  "autoload":{
+    "classmap": [
+      "vendor/alienbrayn/labworks/stolyarov/",
+      "vendor/rok9ru/trpo-core/"
+    ]
+  }
+}

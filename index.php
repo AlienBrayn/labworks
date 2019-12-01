@@ -1,16 +1,21 @@
 <?php
 
+if (file_exists(__DIR__."/../../autoload.php")) {
+    require __DIR__."/../../autoload.php";
+} else
+    {
+        include 'core/EquationInterface.php';
+        include 'core/LogInterface.php';
+        include 'core/LogAbstract.php';
+        include 'stolyarov/StolyarovException.php';
+        include 'stolyarov/LinearEq.php';
+        include 'stolyarov/QuadraticEq.php';
+        include 'stolyarov/Log.php';
+    }
+
 use stolyarov\Log;
 use stolyarov\QuadraticEq;
 use stolyarov\StolyarovException;
-
-include 'core/EquationInterface.php';
-include 'core/LogInterface.php';
-include 'core/LogAbstract.php';
-include 'stolyarov/StolyarovException.php';
-include 'stolyarov/LinearEq.php';
-include 'stolyarov/QuadraticEq.php';
-include 'stolyarov/Log.php';
 
 $eq=new QuadraticEq();
 

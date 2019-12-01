@@ -1,8 +1,13 @@
 <?php
-namespace Stolyarov;
+namespace stolyarov;
 class LinearEq 
 	{
-		function solvel($a,$b,$c)
+    /**
+     * @var float|int
+     */
+    protected $x;
+
+    function solvel($a, $b, $c)
 		{
 			//aX+b=0
 			//x=-b/a

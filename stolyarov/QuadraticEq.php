@@ -1,9 +1,10 @@
 <?php
 namespace stolyarov;
 use core;
+
 class QuadraticEq extends LinearEq implements core\EquationInterface
 	{
-		protected function discr($a,$b,$c)
+    protected function discr($a, $b, $c)
 		{
 			//D=b^2-4ac
 			$discr=pow($b,2)-4*$a*$c;

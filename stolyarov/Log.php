@@ -1,18 +1,20 @@
 <?php
-	namespace stolyarov;
-	/**
-	 * 
-	 */
-	use core;
-	class Log extends core\LogAbstract implements core\LogInterface
+namespace stolyarov;
+use core;
+
+class Log extends core\LogAbstract implements core\LogInterface
 	{
 		public static function log($str)
         {
-            $file=fopen("Log/log.txt",'a');
-            $write=fwrite($file,date(DATE_COOKIE)." | ".$str."\r\n");
-            fclose($file);
-            if ($write) self::Instance()->log[]=$str;
-            else throw new StolyarovException("Error adding message");
+            if(file_exists(__DIR__."/../Log/")){
+                if (file_put_contents(__DIR__."/../Log/log.log",date(DATE_COOKIE)." | ".$str."\r\n"))
+                    self::Instance()->log[]=$str;
+                else throw new StolyarovException("Error adding message");
+            }
+            else {
+                mkdir(__DIR__."/../Log/");
+                self::log($str);
+            }
 		}
    		public static function write(){
             self::Instance()->_write();

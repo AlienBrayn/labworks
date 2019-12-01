@@ -1,0 +1,7 @@
+Log/
+start
+.idea/
+core/
+version
+vendor
+/start_composer.bat
