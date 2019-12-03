@@ -7,7 +7,7 @@ class Log extends core\LogAbstract implements core\LogInterface
 		public static function log($str)
         {
             if(file_exists(__DIR__."/../Log/")){
-                if (file_put_contents(__DIR__."/../Log/log.log",date(DATE_COOKIE)." | ".$str."\r\n"))
+                if (file_put_contents(__DIR__."/../Log/log.log",date(DATE_COOKIE)." | ".$str."\r\n",FILE_APPEND))
                     self::Instance()->log[]=$str;
                 else throw new StolyarovException("Error adding message");
             }
