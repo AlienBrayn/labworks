@@ -1,29 +1,38 @@
 {
-  "name": "alienbrayn/labworks",
-  "description": "Лабораторные работы",
-  "keywords": ["lab"],
-  "license": "WTFPL",
-  "authors": [
-    {
-      "name": "Alex Stolyarov"
-    }
-  ],
+  "minimum-stability": "dev",
   "require": {
-    "php":">=5.0.0",
-    "rok9ru/trpo-core":"1.0"
-  },
-  "repositories":[
+    "php":">=5.3.0",
+    "alienbrayn/stolyarovlib":"dev-master",
+    "rok9ru/trpo-core":"dev-master"
+  },"repositories":[
     {
       "type":"package",
       "package":{
         "name":"rok9ru/trpo-core",
-        "version":"1.0",
+        "version":"dev-master",
         "source":{
           "type":"git",
           "url":"https://github.com/rok9ru/trpo-core.git",
           "reference":"master"
         }
       }
+    },{
+      "type":"package",
+      "package":{
+        "name":"alienbrayn/stolyarovlib",
+        "version":"dev-master",
+        "source":{
+          "type":"git",
+          "url":"https://github.com/AlienBrayn/stolyarovlib.git",
+          "reference":"master"
+        }
+      }
     }
-  ]
+  ],
+  "autoload":{
+    "classmap": [
+      "vendor/alienbrayn/stolyarovlib/",
+      "vendor/rok9ru/trpo-core/"
+    ]
+  }
 }
