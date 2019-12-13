@@ -30,9 +30,9 @@
     }
   ],
   "autoload":{
-    "classmap": [
-      "vendor/alienbrayn/stolyarovlib/",
-      "vendor/rok9ru/trpo-core/"
-    ]
+    "psr-4": {
+      "stolyarov\\":"vendor\\alienbrayn\\stolyarovlib",
+      "core\\":"vendor\\rok9ru\\trpo-core"
+    }
   }
 }
