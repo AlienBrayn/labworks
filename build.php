@@ -21,14 +21,3 @@
         echo "Created version file\n";
         exit();
     }
-
-//Основоной проект
-    //index.php
-    //build.___
-    //composer.json
-    //composer.lock
-
-//проект stolyarov 
-//stolyarov
-//  ->stolyarovex
-//  ->Liner
