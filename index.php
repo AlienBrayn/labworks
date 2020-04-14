@@ -1,8 +1,12 @@
 <?php
 
-if (file_exists(__DIR__."/vendor/autoload.php")) {
-    require __DIR__."/vendor/autoload.php";
-}
+include 'core/EquationInterface.php';
+include 'core/LogInterface.php';
+include 'core/LogAbstract.php';
+include 'stolyarov/StolyarovException.php';
+include 'stolyarov/LinearEq.php';
+include 'stolyarov/QuadraticEq.php';
+include 'stolyarov/Log.php';
 
 use stolyarov\Log;
 use stolyarov\QuadraticEq;
@@ -17,7 +21,7 @@ $c=0;
 try {
     function entercheck($num,$letter)
     {
-        $pattern = '#^[0-9]*[.]?[0-9]+$#';
+        $pattern = '#^[-]?[0-9]*[.]?[0-9]+$#';
         for (;;) {
             $num=readline("Enter $letter=");
             echo "\n";
