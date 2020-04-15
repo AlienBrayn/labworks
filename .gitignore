@@ -1,6 +1,9 @@
 Log/
 start
 .idea/
+.git/
 version
 vendor
-core/
+phpunit*.phar
+composer.lock
+start.bat

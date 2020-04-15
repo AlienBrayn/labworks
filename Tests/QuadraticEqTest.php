@@ -1,12 +1,8 @@
 <?php
 
-include 'core/EquationInterface.php';
-include 'core/LogInterface.php';
-include 'core/LogAbstract.php';
-include 'stolyarov/StolyarovException.php';
-include 'stolyarov/LinearEq.php';
-include 'stolyarov/QuadraticEq.php';
-include 'stolyarov/Log.php';
+if (file_exists(__DIR__."/..//vendor/autoload.php")) {
+    require __DIR__."/../vendor/autoload.php";
+}
 
 use stolyarov\QuadraticEq;
 use PHPUnit\Framework\TestCase;
